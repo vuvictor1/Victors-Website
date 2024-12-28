@@ -56,8 +56,6 @@ ui.add_head_html("""
     .languages:hover { /* Hover border color for card */
         border-color: #F5A623; 
     }
-    
-    
 </style>
 """)
 
@@ -81,7 +79,7 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
             linkedin_url = 'https://www.linkedin.com/in/victor-v-a9236b239/'
             ui.button('Linkedin', icon='business', on_click=lambda: ui.navigate.to(linkedin_url, new_tab=True)) # linkedin button
             github_url = 'https://github.com/vuvictor1'
-            ui.button('GitHub', icon='business', on_click=lambda: ui.navigate.to(github_url, new_tab=True)) # github button
+            ui.button('GitHub', icon='</>', on_click=lambda: ui.navigate.to(github_url, new_tab=True)) # github button
         with ui.row().style('justify-content: center; margin-top: 20px;'): # Email row
             ui.icon('contact_mail').style('color: #FFFFFF; font-size: 28px;') # email icon
             ui.label('Email: vuvictor@csu.fullerton.edu').style('color: #FFFFFF; font-size: 16px;') # email label
