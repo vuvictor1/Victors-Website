@@ -75,12 +75,16 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
         and a highly motivated 1st generation student. Outside of Computer Science studies, I enjoy vocal percussion, aquariums, history and learning foreign languages. 
         Someday I hope to combine my foreign language profiency and technical skills in order to make an international impact as a Software Engineer. 
         Please check out my full work in the projects and interests tab above.''').style('color: #FFFFFF; font-size: 16px;')
-        #with ui.row().style('justify-content: center; margin-top: 20px;'):  # Icons row
-            #ui.button('Resume').style('background: none; border: none; color: #FFFFFF; font-size: 16px;').on('click', lambda: ui.open_url('https://docs.google.com/document/d/1CaZ1Y2JxgRA_sWEilsJAC4k9DUltIfiI/edit?usp=sharing&ouid=115779223920772749975&rtpof=true&sd=true'))
-            #ui.icon('linkedin-outline').style('color: #FFFFFF; font-size: 24px;') # linkedin icon
-            #ui.icon('eva-github').classes('text-5xl').style('color: #FFFFFF; font-size: 24px;') # github icon
-            #ui.icon('contact_mail').style('color: #FFFFFF; font-size: 24px;') # email icon
-        
+        with ui.row().style('justify-content: center; margin-top: 20px;'): # Icons row
+            resume_url = 'https://docs.google.com/document/d/1CaZ1Y2JxgRA_sWEilsJAC4k9DUltIfiI/edit?usp=sharing&ouid=115779223920772749975&rtpof=true&sd=true'
+            ui.button('Resume', icon='description', on_click=lambda: ui.navigate.to(resume_url, new_tab=True)) # resume button
+            linkedin_url = 'https://www.linkedin.com/in/victor-v-a9236b239/'
+            ui.button('Linkedin', icon='business', on_click=lambda: ui.navigate.to(linkedin_url, new_tab=True)) # linkedin button
+            github_url = 'https://github.com/vuvictor1'
+            ui.button('GitHub', icon='business', on_click=lambda: ui.navigate.to(github_url, new_tab=True)) # github button
+        with ui.row().style('justify-content: center; margin-top: 20px;'): # Email row
+            ui.icon('contact_mail').style('color: #FFFFFF; font-size: 28px;') # email icon
+            ui.label('Email: vuvictor@csu.fullerton.edu').style('color: #FFFFFF; font-size: 16px;') # email label
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project section
     ui.label('Featured Projects').style('color: #FFFFFF; font-size: 32px;') 
