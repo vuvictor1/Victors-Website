@@ -8,10 +8,6 @@ from nicegui import ui
 with ui.header().style('background-color: #6A4C9C;'): # Header menu
     ui.label('⚡ Victor\'s Website').style('color: #FFFFFF; font-size: 24px;')  
 
-with ui.right_drawer().style('background-color: #6C757D; align-items: center;'): # Right Drawer
-    ui.label('[Pages]').style('color: #FFFFFF; font-size: 18px;') 
-    ui.label('This portfolio contains information on my projects and experience in tech.').style('color: #FFFFFF; font-size: 14px;')
-
 # Inject CSS effects
 ui.add_head_html("""
 <style>
@@ -69,49 +65,52 @@ with ui.row().style('justify-content: center; width: 100%'): # Main title
     ui.label('Victor V. Vu').style('color: #FFFFFF; font-size: 32px;')
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # About me
-    with ui.column().classes('about-me'): # Use CSS hover effect
+    with ui.column().classes('about-me').style('align-items: center; text-align: center;'): # Use CSS hover effect and center content
+        ui.image('https://i.imgur.com/DaV1eqK.png').style('border-radius: 50%; width: 150px; margin-bottom: 20px;') # imported profile picture
+        ui.label('Aspiring Software Engineer').style('color: #FFFFFF; font-size: 20px;')
         ui.label('About Me').style('color: #FFFFFF; font-weight: bold; font-size: 24px;')
+        # Multi-line text
         ui.label('''Hi! I'm Victor Vu, a computer science student with a passion for technology, coding, and aquatic ecosystems. 
         I have experience in full-stack development, data analysis, and building simulations for environmental management.''').style('color: #FFFFFF; font-size: 16px;')
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Projects
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project section
     ui.label('Featured Projects').style('color: #FFFFFF; font-size: 32px;') 
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project cards
     for project in ['Aquatic Ecosphere System', 'Real-Time Strategy Game', 'Tic-Tac-Toe Web Game']: # List of projects
-        with ui.column().classes('card').style('align-items: center; text-align: center;'): # Center content
-            ui.label(project).style('color: #FFFFFF; font-weight: bold;')
+        with ui.column().classes('card').style('align-items: center; text-align: center;'): 
+            ui.label(project).style('color: #FFFFFF; font-weight: bold;') 
             ui.label('Description: A brief description of the project will go here.').style('color: #FFFFFF;')
-            ui.button('Learn More') 
+            ui.button('Learn More') # redirect to project page
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming 
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming section
     ui.label('Programming Languages').style('color: #FFFFFF; font-size: 32px;') 
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming Languages
-    for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'Assembly']: # List of programming languages
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming cards
+    for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'Assembly']: 
         with ui.column().classes('languages').style('align-items: center; text-align: center;'):
             ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education section
     ui.label('Educational Background').style('color: #FFFFFF; font-size: 32px;')
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education background
-    for edcuation in ['B.Sc. in Computer Science, California State University, Fullerton', 'Minor of Modern Language in Japanese, California State University, Fullerton', 
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education cards
+    for edcuation in ['B.Sc. in Computer Science, California State University, Fullerton', 
+    'Minor of Modern Language in Japanese, California State University, Fullerton', 
                       'State Seal of Biliteracy in Vietnamese, California Department of Education']:
-         with ui.column().classes('card').style('align-items: center; text-align: center;'): # Center content
+         with ui.column().classes('card').style('align-items: center; text-align: center;'): 
             ui.label(edcuation).style('color: #FFFFFF; font-weight: bold;')
             ui.label('Description: A brief description of the education background will go here.').style('color: #FFFFFF;')
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages   
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages section  
     ui.label('Foreign Languages').style('color: #FFFFFF; font-size: 32px;')
 
-with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages
+with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages cards
     for language in ['English', 'Vietnamese', 'Japanese']:
         with ui.column().classes('card').style('align-items: center; text-align: center;'):
             ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
-
-with ui.footer().style('background-color: #6A4C9C; justify-content: center;'): # Footer
-    ui.label('Copyright (C) 2024 | Victor Vu').style('color: #FFFFFF; font-size: 18px;')
+with ui.footer().style('background-color: #6A4C9C; justify-content: center;'): # Footer section
+    ui.label('Copyright (C) Victor Vu | Last updated 12/27/24').style('color: #FFFFFF; font-size: 18px;')
 
 ui.run(title="Victor Vu | Portfolio", favicon="⚡") # Run UI with name and logo
