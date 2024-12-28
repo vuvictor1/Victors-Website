@@ -69,13 +69,27 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
         ui.image('https://i.imgur.com/DaV1eqK.png').style('border-radius: 50%; width: 150px; margin-bottom: 20px;') # imported profile picture
         ui.label('Aspiring Software Engineer').style('color: #FFFFFF; font-size: 20px;')
         ui.label('About Me').style('color: #FFFFFF; font-weight: bold; font-size: 24px;')
+        ui.label('Hi! I\'m Victor Vu and welcome to my website. This is a portfolio I built from scratch using Python and CSS.').style('color: #FFFFFF; font-size: 16px;')
         # Multi-line text
-        ui.label('''Hi! I'm Victor Vu, a computer science student with a passion for technology, coding, and aquatic ecosystems. 
-        I have experience in full-stack development, data analysis, and building simulations for environmental management.''').style('color: #FFFFFF; font-size: 16px;')
+        ui.label('''I'm trilingual speaking programmer with a passion for writing code, a capable leader with experience in higher education 
+        and a highly motivated 1st generation student. Outside of Computer Science studies, I enjoy vocal percussion, aquariums, history and learning foreign languages. 
+        Someday I hope to combine my foreign language profiency and technical skills in order to make an international impact as a Software Engineer. 
+        Please check out my full work in the projects and interests tab above.''').style('color: #FFFFFF; font-size: 16px;')
+        #with ui.row().style('justify-content: center; margin-top: 20px;'):  # Icons row
+            #ui.button('Resume').style('background: none; border: none; color: #FFFFFF; font-size: 16px;').on('click', lambda: ui.open_url('https://docs.google.com/document/d/1CaZ1Y2JxgRA_sWEilsJAC4k9DUltIfiI/edit?usp=sharing&ouid=115779223920772749975&rtpof=true&sd=true'))
+            #ui.icon('linkedin-outline').style('color: #FFFFFF; font-size: 24px;') # linkedin icon
+            #ui.icon('eva-github').classes('text-5xl').style('color: #FFFFFF; font-size: 24px;') # github icon
+            #ui.icon('contact_mail').style('color: #FFFFFF; font-size: 24px;') # email icon
+        
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project section
     ui.label('Featured Projects').style('color: #FFFFFF; font-size: 32px;') 
 
+project_descriptions = { # Dictionary of project descriptions
+    'Aquatic EcoSphere System': 'Description: A system to simulate and monitor aquatic ecosystems.',
+    'Smart-Navi': 'Description: A game where players control units and structures in real-time.',
+    'GUI-Algorithms': 'Description: A web-based version of the classic Tic-Tac-Toe game.'
+}
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project cards
     for project in ['Aquatic Ecosphere System', 'Real-Time Strategy Game', 'Tic-Tac-Toe Web Game']: # List of projects
         with ui.column().classes('card').style('align-items: center; text-align: center;'): 
@@ -106,7 +120,7 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
     ui.label('Foreign Languages').style('color: #FFFFFF; font-size: 32px;')
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages cards
-    for language in ['English', 'Vietnamese', 'Japanese']:
+    for language in ['English (Native)', 'Vietnamese (Fluent)', 'Japanese (Advanced)']:
         with ui.column().classes('card').style('align-items: center; text-align: center;'):
             ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
