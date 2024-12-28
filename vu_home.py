@@ -88,15 +88,15 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
     ui.label('Featured Projects').style('color: #FFFFFF; font-size: 32px;') 
 
 project_descriptions = { # Dictionary of project descriptions
-    'Aquatic EcoSphere System': 'Description: A system to simulate and monitor aquatic ecosystems.',
-    'Smart-Navi': 'Description: A game where players control units and structures in real-time.',
-    'GUI-Algorithms': 'Description: A web-based version of the classic Tic-Tac-Toe game.'
+    'Aquatic EcoSphere System': 'Monitoring tool for aquatic ecosystems with sensors, to analyze real-time data.',
+    'Smart Navigation Tool': 'Navigation system that uses pathfinding to find the most optimal route',
+    'GUI Algorithms Sorter': 'Application to visualize bubble, merge and quick sorting sorting algorithms.'
 }
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project cards
-    for project in ['Aquatic Ecosphere System', 'Real-Time Strategy Game', 'Tic-Tac-Toe Web Game']: # List of projects
+    for project in project_descriptions.keys(): # List of projects
         with ui.column().classes('card').style('align-items: center; text-align: center;'): 
             ui.label(project).style('color: #FFFFFF; font-weight: bold;') 
-            ui.label('Description: A brief description of the project will go here.').style('color: #FFFFFF;')
+            ui.label(f'{project_descriptions[project]}').style('color: #FFFFFF;')
             ui.button('Learn More') # redirect to project page
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming section
