@@ -88,14 +88,14 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
     ui.label('Featured Projects').style('color: #FFFFFF; font-size: 32px;') 
 
 project_descriptions = { # Dictionary of project descriptions
-    'Aquatic EcoSphere System': 'Monitoring tool for aquatic ecosystems with sensors, to analyze real-time data.',
-    'Smart Navigation Tool': 'Navigation system that uses pathfinding to find the most optimal route',
-    'GUI Algorithms Sorter': 'Application to visualize bubble, merge and quick sorting sorting algorithms.'
+    '🌊 Aquatic EcoSphere System': 'Monitoring tool for aquatic ecosystems with sensors, to analyze real-time data.',
+    '🗺️ Smart Navigation Tool': 'Navigation system that uses pathfinding to find the most optimal route',
+    '⚙️ GUI Algorithms Sorter': 'Application to visualize bubble, merge and quick sorting sorting algorithms.'
 }
 project_urls = { # Dictionary of project URLs
-    'Aquatic EcoSphere System': 'https://github.com/vuvictor1/Aquatic-EcoSphere-System',
-    'Smart Navigation Tool': 'https://github.com/vuvictor1/SmartNavi',
-    'GUI Algorithms Sorter': 'https://github.com/vuvictor1/GUI-Algorithms'
+    '🌊 Aquatic EcoSphere System': 'https://github.com/vuvictor1/Aquatic-EcoSphere-System',
+    '🗺️ Smart Navigation Tool': 'https://github.com/vuvictor1/SmartNavi',
+    '⚙️ GUI Algorithms Sorter': 'https://github.com/vuvictor1/GUI-Algorithms'
 }
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project cards
     for project in project_descriptions.keys(): # List of projects
@@ -108,20 +108,23 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
     ui.label('Programming Languages').style('color: #FFFFFF; font-size: 32px;') 
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming cards
-    for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'Assembly']: 
+    for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'JavaScript', 'Assembly']: 
         with ui.column().classes('languages').style('align-items: center; text-align: center;'):
             ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education section
     ui.label('Educational Background').style('color: #FFFFFF; font-size: 32px;')
 
+education_descriptions = { # Dictionary education descriptions
+    'B.Sc. in Computer Science, California State University, Fullerton': 'Expected Graduation: May 2025',
+    'Minor of Modern Language in Japanese, California State University, Fullerton': 'Advanced by Faculty Evaluation',
+    'State Seal of Biliteracy in Vietnamese, California Department of Education': 'Heritage Language with 4 Years of Study'
+}
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education cards
-    for edcuation in ['B.Sc. in Computer Science, California State University, Fullerton', 
-    'Minor of Modern Language in Japanese, California State University, Fullerton', 
-                      'State Seal of Biliteracy in Vietnamese, California Department of Education']:
+    for education in education_descriptions.keys(): # List of education
          with ui.column().classes('card').style('align-items: center; text-align: center;'): 
-            ui.label(edcuation).style('color: #FFFFFF; font-weight: bold;')
-            ui.label('Description: A brief description of the education background will go here.').style('color: #FFFFFF;')
+            ui.label(education).style('color: #FFFFFF; font-weight: bold;')
+            ui.label(f'{education_descriptions[education]}').style('color: #FFFFFF;') 
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Languages section  
     ui.label('Foreign Languages').style('color: #FFFFFF; font-size: 32px;')
