@@ -92,12 +92,17 @@ project_descriptions = { # Dictionary of project descriptions
     'Smart Navigation Tool': 'Navigation system that uses pathfinding to find the most optimal route',
     'GUI Algorithms Sorter': 'Application to visualize bubble, merge and quick sorting sorting algorithms.'
 }
+project_urls = { # Dictionary of project URLs
+    'Aquatic EcoSphere System': 'https://github.com/vuvictor1/Aquatic-EcoSphere-System',
+    'Smart Navigation Tool': 'https://github.com/vuvictor1/SmartNavi',
+    'GUI Algorithms Sorter': 'https://github.com/vuvictor1/GUI-Algorithms'
+}
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Project cards
     for project in project_descriptions.keys(): # List of projects
         with ui.column().classes('card').style('align-items: center; text-align: center;'): 
             ui.label(project).style('color: #FFFFFF; font-weight: bold;') 
-            ui.label(f'{project_descriptions[project]}').style('color: #FFFFFF;')
-            ui.button('Learn More') # redirect to project page
+            ui.label(f'{project_descriptions[project]}').style('color: #FFFFFF;') # description of project
+            ui.button('Project', on_click=lambda url=project_urls[project]: ui.navigate.to(url, new_tab=True)) # redirect to project page
 
 with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Programming section
     ui.label('Programming Languages').style('color: #FFFFFF; font-size: 32px;') 
