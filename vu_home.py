@@ -116,7 +116,7 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
     ui.label('Educational Background').style('color: #FFFFFF; font-size: 32px;')
 
 education_descriptions = { # Dictionary education descriptions
-    'B.Sc. in Computer Science, California State University, Fullerton': 'Expected Graduation: May 2025',
+    'Bachelors in Computer Science, California State University, Fullerton': 'Expected Graduation: May 2025',
     'Minor of Modern Language in Japanese, California State University, Fullerton': 'Advanced by Faculty Evaluation',
     'State Seal of Biliteracy in Vietnamese, California Department of Education': 'Heritage Language with 4 Years of Study'
 }
@@ -135,6 +135,6 @@ with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): 
             ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
 with ui.footer().style('background-color: #6A4C9C; justify-content: center;'): # Footer section
-    ui.label('Copyright (C) Victor Vu | Last updated 12/27/24').style('color: #FFFFFF; font-size: 18px;')
+    ui.label('Copyright (C) Victor Vu | Last updated 12/28/24').style('color: #FFFFFF; font-size: 18px;')
 
 ui.run(title="Victor Vu | Portfolio", favicon="⚡") # Run UI with name and logo
