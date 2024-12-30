@@ -4,7 +4,7 @@
 # Copyright (C) 2024 Victor V. Vu
 # License: GNU GPL v3 - See https://www.gnu.org/licenses/gpl-3.0.en.html
 from nicegui import ui
-from components import *
+from components import vu_header, vu_footer, inject_ui
 from pages.experience import experience_page
 
 def home_page(): # Home page function
