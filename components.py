@@ -56,7 +56,7 @@ def inject_ui(): # Injected UI components
     </style>
     """)
 
-def inject_lottie(): # Injected Lottie components
+def inject_lottie(): # Allow lottie components
     ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Header menu component
