@@ -56,6 +56,9 @@ def inject_ui(): # Injected UI components
     </style>
     """)
 
+def inject_lottie(): # Injected Lottie components
+    ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
+
 def vu_header(): # Header menu component
     with ui.header().style('background-color: #6A4C9C;'): 
         ui.link('⚡ Victor\'s Website', '/').style('color: #FFFFFF; font-size: 24px; text-decoration: none;') 
