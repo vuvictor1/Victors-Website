@@ -37,3 +37,8 @@ def experience_page(): # Experience page function
             ui.label('- Coordinated online meetings, encouraging collaboration.').style('color: #FFFFFF;')
 
     vu_footer() # call footer function
+
+@ui.page('/experience') # Route experience page 
+def experience(): 
+    experience_page() 
+

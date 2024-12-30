@@ -90,10 +90,6 @@ def home_page(): # Home page function
     
 ui.run(title="Victor Vu | Portfolio", favicon="⚡") # Run UI with name and logo
 
-# Route all pages
-@ui.page('/') # Home page link
+@ui.page('/') # Route homepage 
 def home(): 
     home_page() # call home_page function
-@ui.page('/experience') 
-def experience(): 
-    experience_page() 
