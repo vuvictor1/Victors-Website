@@ -15,7 +15,7 @@ def experience_page(): # Experience page function
 
     inject_lottie() # inject lottie animation
     lottie_1 = 'https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json' # use lottie file 1
-    with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Experience 2
+    with ui.row().style('justify-content: center; width: 100%;'): # Experience 2
         with ui.column().classes('about-me').style('align-items: center; text-align: center;'):
             ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay style="height: 400px;"></lottie-player>''')
             ui.label('Instructional Student Assistant | CSUF - Department of Engineering and Computer Science').style('color: #FFFFFF; font-weight: bold;')
@@ -26,7 +26,7 @@ def experience_page(): # Experience page function
             ui.label('- Facilitated study sessions to reinforce course understanding.').style('color: #FFFFFF;')
 
     lottie_2 = 'https://assets3.lottiefiles.com/packages/lf20_6ft9bypa.json' # use lottie file 2
-    with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Experience 1
+    with ui.row().style('justify-content: center; width: 100%;'): # Experience 1
         with ui.column().classes('about-me').style('align-items: center; text-align: center;'):
             ui.html(f'''<lottie-player src="{lottie_2}" loop autoplay style="height: 400px;"></lottie-player>''')
             ui.label('C# Peer Programming Tutor  | CSUF - Department of Engineering and Computer Science').style('color: #FFFFFF; font-weight: bold;')
@@ -35,7 +35,6 @@ def experience_page(): # Experience page function
             ui.label('- Debugged various logical errors from student programs, improving grades by 10%.').style('color: #FFFFFF;')
             ui.label('- Presented additional lecture materials on optimizing collision algorithms.').style('color: #FFFFFF;')
             ui.label('- Coordinated online meetings, encouraging collaboration.').style('color: #FFFFFF;')
-
     vu_footer() # call footer function
 
 @ui.page('/experience') # Route experience page 

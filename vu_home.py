@@ -6,6 +6,8 @@
 from nicegui import ui
 from components import vu_header, vu_footer, inject_ui
 from pages.experience import experience_page
+from pages.projects import projects_page
+from pages.interests import interests_page
 
 def home_page(): # Home page function
     vu_header() # call header function
@@ -85,7 +87,6 @@ def home_page(): # Home page function
         for language in ['English (Native)', 'Vietnamese (Fluent)', 'Japanese (Advanced)']:
             with ui.column().classes('card').style('align-items: center; text-align: center;'):
                 ui.label(language).style('color: #FFFFFF; font-weight: bold;')
-
     vu_footer() # call footer function
     
 ui.run(title="Victor Vu | Portfolio", favicon="⚡") # Run UI with name and logo
