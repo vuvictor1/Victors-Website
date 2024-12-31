@@ -64,7 +64,9 @@ def vu_header(): # Header menu component
         ui.link('⚡ Victor\'s Website', '/').style('color: #FFFFFF; font-size: 24px; text-decoration: none;') 
         ui.label('|').style('color: #FFFFFF; font-size: 24px;')
         ui.link('Experience', '/experience').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
+        ui.link('Projects', '/projects').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
+        ui.link('Interests', '/interests').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
 
 def vu_footer(): # Footer menu component
     with ui.footer().style('background-color: #6A4C9C; justify-content: center;'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 12/28/24').style('color: #FFFFFF; font-size: 18px;')
+        ui.label('Copyright (C) Victor Vu | Last updated 12/30/24').style('color: #FFFFFF; font-size: 18px;')
