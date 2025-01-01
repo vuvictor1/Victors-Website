@@ -25,7 +25,7 @@ def inject_ui(): # Injects custom CSS styles
             border-radius: 10px; 
             margin: 10px;
             border: 2px solid {card_background_color}; 
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, transform 0.3s ease; /* smooth transition effect */
         }}
 
         .about-me {{
@@ -33,7 +33,7 @@ def inject_ui(): # Injects custom CSS styles
         }}
 
         .card {{
-            width: 300px; 
+            width: 15%; 
         }}
                     
         .languages {{
@@ -42,6 +42,7 @@ def inject_ui(): # Injects custom CSS styles
 
         .about-me:hover, .card:hover, .languages:hover {{
             border-color: {hover_border_color}; 
+            transform: scale(1.05);
         }}
     </style>
     """)
@@ -50,7 +51,7 @@ def inject_lottie(): # Injects Lottie player script
     ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
-    with ui.header().style(f'background-color: {header_footer_color};'): 
+    with ui.header().style(f'background-color: {header_footer_color}; justify-content: center;'): 
         ui.link('⚡ Victor\'s Website', '/').style(f'color: {text_color}; font-size: 24px; text-decoration: none;') 
         ui.label('|').style(f'color: {text_color}; font-size: 24px;')
         ui.link('Experience', '/experience').style(f'color: {text_color}; font-size: 24px; text-decoration: none;')
@@ -60,4 +61,4 @@ def vu_header(): # Creates the header menu component
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center;'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 12/30/24').style(f'color: {text_color}; font-size: 18px;')
+        ui.label('Copyright (C) Victor Vu | Last updated 1/1/25').style(f'color: {text_color}; font-size: 18px;')
