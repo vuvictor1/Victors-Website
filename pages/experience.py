@@ -7,13 +7,6 @@ from nicegui import ui
 from components import *
 
 # Constants for repeated styles
-LABEL_STYLE = 'color: #FFFFFF;'
-TITLE_STYLE = 'color: #FFFFFF; font-size: 32px;'
-BOLD_LABEL_STYLE = 'color: #FFFFFF; font-weight: bold;'
-COLUMN_STYLE = 'align-items: center; text-align: center;'
-LOTTIE_STYLE = 'height: 400px;'
-
-# Constants for repeated styles
 label_style = 'color: #FFFFFF;'
 title_style = 'color: #FFFFFF; font-size: 32px;'
 bold_label_style = 'color: #FFFFFF; font-weight: bold;'
