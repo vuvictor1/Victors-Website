@@ -95,9 +95,9 @@ def home_page(): # Home Page
         ui.label('Languages').style(f'{white_text_style} font-size: 32px;') # Title
 
     with ui.row().style(f'{center_style} {margin_top_20_style}'): # Centered row languages
-        for language in ['English (Native)', 'Vietnamese (Fluent)', 'Japanese (Advanced)']: # Foreign Languages
-            with ui.column().classes('card').style('align-items: center; text-align: center;'): # Language Card
-                ui.label(language).style(f'{white_text_style} font-size: 16px;')
+        with ui.column().classes('languages').style('align-items: center; text-align: center; width: 20%;'): # Language Card
+            languages = 'English (Native) | Vietnamese (Fluent) | Japanese (Advanced)'
+            ui.label(languages).style(f'{white_text_style} font-size: 16px;')
     vu_footer() # inject footer
 
 ui.run(title="Victor Vu | Portfolio", favicon="⚡") # Run UI with icon
