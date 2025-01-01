@@ -67,6 +67,10 @@ def home_page(): # Home page function
             with ui.column().classes('languages').style('align-items: center; text-align: center;'):
                 ui.label(language).style('color: #FFFFFF; font-weight: bold;')
 
+    with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Technology section
+        ui.label('Technologies:').style('color: #FFFFFF; font-size: 32px;') 
+        ui.label('React, CSS, HTML, MySQL, PostGreSQL, Power BI, Google Cloud, Microsoft Azure, and Oracle Cloud').style('color: #FFFFFF;') 
+
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Education section
         ui.label('Educational Background').style('color: #FFFFFF; font-size: 32px;')
 
