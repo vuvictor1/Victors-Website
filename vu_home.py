@@ -8,6 +8,7 @@ from components import vu_header, vu_footer, inject_ui
 from pages.experience import experience_page
 from pages.projects import projects_page
 from pages.interests import interests_page
+from pages.contacts import contacts_page
 
 def home_page(): # Home page function
     vu_header() # call header function
