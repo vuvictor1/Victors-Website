@@ -66,6 +66,7 @@ def vu_header(): # Header menu component
         ui.link('Experience', '/experience').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
         ui.link('Projects', '/projects').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
         ui.link('Interests', '/interests').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
+        ui.link('Contact', '/contacts').style('color: #FFFFFF; font-size: 24px; text-decoration: none;')
 
 def vu_footer(): # Footer menu component
     with ui.footer().style('background-color: #6A4C9C; justify-content: center;'): 
