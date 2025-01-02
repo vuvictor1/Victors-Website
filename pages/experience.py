@@ -7,9 +7,9 @@ from nicegui import ui
 from components import *
 
 # Constants for repeated styles
-label_style = 'color: #FFFFFF;'
+label_style = 'color: #FFFFFF; font-size: 16px;'
 title_style = 'color: #FFFFFF; font-size: 32px;'
-bold_label_style = 'color: #FFFFFF; font-weight: bold;'
+bold_label_style = 'color: #FFFFFF; font-size: 20px;'
 column_style = 'align-items: center;'
 lottie_style = 'height: 400px;'
 
@@ -25,7 +25,7 @@ def experience_page(): # Function to render the experience page
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Center columns and lower the margin
         with ui.column().classes('work').style(column_style): # Column for the first experience
             ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay style="{lottie_style}"></lottie-player>''') # play animation
-            ui.label('Instructional Student Assistant | CSUF - Department of Engineering and Computer Science').style(bold_label_style)
+            ui.label('Instructional Assistant | CSUF - Department of Computer Science').style(bold_label_style)
             ui.label('(January 2023 - May 2023)').style(label_style)
             ui.label('● Supported 60+ students enrolled in Computer Architecture and Systems Programming.').style(label_style)
             ui.label('● Evaluated software developed in x86-64 Assembly, C++, and C.').style(label_style)
@@ -35,7 +35,7 @@ def experience_page(): # Function to render the experience page
         lottie_2 = 'https://assets3.lottiefiles.com/packages/lf20_6ft9bypa.json'
         with ui.column().classes('work').style(column_style): # Column for the second experience
             ui.html(f'''<lottie-player src="{lottie_2}" loop autoplay style="{lottie_style}"></lottie-player>''') 
-            ui.label('C# Peer Programming Tutor  | CSUF - Department of Engineering and Computer Science').style(bold_label_style)
+            ui.label('Peer Programming Tutor  | CSUF - Department of Computer Science').style(bold_label_style)
             ui.label('(August 2022 - December 2022)').style(label_style)
             ui.label('● Tutored 30+ peers enrolled in C# GUI Programming.').style(label_style)
             ui.label('● Debugged various logical errors from student programs, improving grades by 10%.').style(label_style)
