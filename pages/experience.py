@@ -10,7 +10,7 @@ from components import *
 label_style = 'color: #FFFFFF;'
 title_style = 'color: #FFFFFF; font-size: 32px;'
 bold_label_style = 'color: #FFFFFF; font-weight: bold;'
-column_style = 'align-items: center; text-align: center;'
+column_style = 'align-items: center;'
 lottie_style = 'height: 400px;'
 
 def experience_page(): # Function to render the experience page
@@ -22,26 +22,25 @@ def experience_page(): # Function to render the experience page
     inject_lottie() # inject lottie animation
 
     lottie_1 = 'https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json' 
-    with ui.row().style('justify-content: center; width: 100%;'): 
-        with ui.column().classes('about-me').style(column_style): # Column for the first experience
+    with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Center columns and lower the margin
+        with ui.column().classes('work').style(column_style): # Column for the first experience
             ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay style="{lottie_style}"></lottie-player>''') # play animation
             ui.label('Instructional Student Assistant | CSUF - Department of Engineering and Computer Science').style(bold_label_style)
             ui.label('(January 2023 - May 2023)').style(label_style)
-            ui.label('- Supported 60+ students enrolled in Computer Architecture and Systems Programming.').style(label_style)
-            ui.label('- Evaluated software developed in x86-64 Assembly, C++, and C.').style(label_style)
-            ui.label('- Provided extensive feedback on code design.').style(label_style)
-            ui.label('- Facilitated study sessions to reinforce course understanding.').style(label_style)
+            ui.label('● Supported 60+ students enrolled in Computer Architecture and Systems Programming.').style(label_style)
+            ui.label('● Evaluated software developed in x86-64 Assembly, C++, and C.').style(label_style)
+            ui.label('● Provided extensive feedback on code design.').style(label_style)
+            ui.label('● Facilitated study sessions to reinforce course understanding.').style(label_style)
 
-    lottie_2 = 'https://assets3.lottiefiles.com/packages/lf20_6ft9bypa.json'
-    with ui.row().style('justify-content: center; width: 100%;'):
-        with ui.column().classes('about-me').style(column_style): # Column for the second experience
+        lottie_2 = 'https://assets3.lottiefiles.com/packages/lf20_6ft9bypa.json'
+        with ui.column().classes('work').style(column_style): # Column for the second experience
             ui.html(f'''<lottie-player src="{lottie_2}" loop autoplay style="{lottie_style}"></lottie-player>''') 
             ui.label('C# Peer Programming Tutor  | CSUF - Department of Engineering and Computer Science').style(bold_label_style)
             ui.label('(August 2022 - December 2022)').style(label_style)
-            ui.label('- Tutored 30+ peers enrolled in C# GUI Programming.').style(label_style)
-            ui.label('- Debugged various logical errors from student programs, improving grades by 10%.').style(label_style)
-            ui.label('- Presented additional lecture materials on optimizing collision algorithms.').style(label_style)
-            ui.label('- Coordinated online meetings, encouraging collaboration.').style(label_style)
+            ui.label('● Tutored 30+ peers enrolled in C# GUI Programming.').style(label_style)
+            ui.label('● Debugged various logical errors from student programs, improving grades by 10%.').style(label_style)
+            ui.label('● Presented additional lecture materials on optimizing collision algorithms.').style(label_style)
+            ui.label('● Coordinated online meetings, encouraging collaboration.').style(label_style)
     vu_footer() # call footer function
 
 @ui.page('/experience') # Route to experience page
