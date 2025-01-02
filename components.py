@@ -38,7 +38,7 @@ def inject_ui(): # Injects custom CSS styles
             width: 125px; 
         }}
         .work {{
-            width: 25%;
+            width: 27%;
         }}
 
         .about-me:hover, .card:hover, .languages:hover, .work:hover {{
