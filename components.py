@@ -19,7 +19,7 @@ def inject_ui(): # Injects custom CSS styles
             background-color: {background_color};
         }}
         /* CSS Styles */            
-        .about-me, .card, .languages, .work {{
+        .about-me, .card, .languages, .work, .projects {{
             background-color: {card_background_color}; 
             padding: 20px; 
             border-radius: 10px; 
@@ -40,8 +40,11 @@ def inject_ui(): # Injects custom CSS styles
         .work {{
             width: 27%;
         }}
+        .projects {{
+            width: 40%;
+        }}
 
-        .about-me:hover, .card:hover, .languages:hover, .work:hover {{
+        .about-me:hover, .card:hover, .languages:hover, .work:hover, .projects:hover {{
             border-color: {hover_border_color}; 
             transform: scale(1.05);
         }}
