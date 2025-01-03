@@ -40,7 +40,7 @@ def interests_page(): # Interests page
             create_label('An essay I wrote in the hopes of convincing more people to study another language. It includes a comparison between English and Japanese, while also addressing common counterarguments.')
             create_link('Sino Vocabulary of East Asian Languages', 'https://docs.google.com/document/d/1BBfLXXJ68E90UubSma11_jJuETTFEryMINmtbfg4Oxg/edit?usp=sharing')
             create_label('A list of sino vocabulary I compiled between East Asian languages. It is fascinating that Japanese, Chinese, Vietnamese and by extension Korean share 60% of vocabulary.')
-            create_iframe('https://www.youtube.com/embed/oCEgG6A0N0o')
+            create_iframe('https://drive.google.com/file/d/1oQqcmPOiYSDUKVj0CM91aoDfvYVhJHZ_/preview')
 
             ui.separator() # create a separator
             create_label('Vocal Percussion', sub_style)
