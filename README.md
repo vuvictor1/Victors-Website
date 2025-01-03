@@ -9,13 +9,14 @@ Deployment: https://vuvictor.up.railway.app/
 This web application was developed using Python and CSS, leveraging the NiceGUI library. 
 It features various sections, multi-page support, forms, embedded media and an interactive UI.
 
-**Run Instructions:**
+**Run Instructions:** Type
 ```
-To run type: python3 vu_home.py
+python3 vu_home.py
 ```
 
 ***Requirements:***
 - Python3
 - NiceGUI
 
-Images: TBA
+![Capture](https://github.com/user-attachments/assets/5163baa9-8558-4135-8266-6d1b370c8133)
+
