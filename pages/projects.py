@@ -22,12 +22,13 @@ def create_link(text, url, color=orange_color, font_size=font_size_link): # Help
     ui.link(text, url).style(f'color: {color}; font-size: {font_size}; margin-bottom: 10px;')
 
 def create_project_section(link_text, link_url, description, details): # Helper function to create a project section
-    with ui.row().style('justify-content: center; width: 100%; margin-bottom: 20px;'):
-        create_link(link_text, link_url)
-        create_label(f' {description}')
-    for detail in details:
-        create_label(detail)
-    ui.separator().style('margin: 20px 0;')
+    with ui.card().style('width: 100%; margin-bottom: 20px; background-color: #333333; color: #FFFFFF;'):
+        with ui.row().style('justify-content: center; width: 100%;'):
+            create_link(link_text, link_url, color='#FFA500')
+            create_label(f' {description}', color='#FFFFFF')
+        for detail in details:
+            create_label(detail, color='#FFFFFF')
+        ui.separator().style('margin: 20px 0;')
 
 def create_project_row(projects): # Helper function to create a project row
     with ui.row().style('justify-content: center; width: 100%; margin-bottom: 20px;'):
