@@ -41,7 +41,7 @@ def create_research_project_section(link_text, link_url, description, details): 
 
 def create_project_row(projects, is_research=False): # Helper function to create a project row
     with ui.row().style('justify-content: center; width: 100%; margin-bottom: 20px;'):
-        for project in projects:
+        for project in projects: 
             with ui.column().style('width: 45%; margin: 10px;'):
                 if is_research:
                     create_research_project_section(*project)
@@ -58,7 +58,7 @@ def projects_page(): # Projects page main function
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Projects content
         with ui.column().style('align-items: center; text-align: center;'):
-            ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay style="height: 400px; margin-bottom: 20px;"></lottie-player>') # play lottie animation
+            ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay style="height: 400px; margin-top: -100px;"></lottie-player>') # play lottie animation
 
             # List of projects
             programming_projects = [
@@ -114,7 +114,7 @@ def projects_page(): # Projects page main function
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Research projects content
         with ui.column().style('align-items: center; text-align: center;'):
-            ui.html(f'<lottie-player src="{lottie_4_url}" loop autoplay style="height: 400px; margin-bottom: 20px;"></lottie-player>')
+            ui.html(f'<lottie-player src="{lottie_4_url}" loop autoplay style="height: 400px; margin-top: -80px;"></lottie-player>')
             research_projects = [ # List of research projects
                 ('Operations Analysis', 'https://docs.google.com/document/d/1XhZCOei60DCcFlYO1scSQ5m6UwcKfwTgmN0NjlamjtY/edit?tab=t.0#heading=h.868kz7lj5kq9', 'Detailed report on the time complexities of binary search trees, hash tables, vectors, dynamic link libraries and singly linked lists operations.', []),
                 ('Rain Gutter Construction', 'https://docs.google.com/document/d/1_RcIvuWFvMmvF96vdpOod8z2vCf5s2mVkY4_UVU5vZU/edit?tab=t.0', 'Mathematical approach on how to solve the rain gutter problem of determining an object design\'s water capacity using Calculus.', []),
