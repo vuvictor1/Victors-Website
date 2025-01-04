@@ -26,7 +26,7 @@ def create_project_section(link_text, link_url, description, details): # Helper 
         with ui.row().style('justify-content: center; width: 100%;'):
             create_link(link_text, link_url, color='#FFA500')
             create_label(f' {description}', color='#FFFFFF')
-        for detail in details:
+        for detail in details: # Create project details
             create_label(detail, color='#FFFFFF')
         ui.separator().style('margin: 20px 0;')
 
@@ -95,7 +95,7 @@ def projects_page(): # Projects page main function
             ]
 
             for i in range(0, len(projects), 2): # Create project rows
-                create_project_row(projects[i:i+2])
+                create_project_row(projects[i:i+2]) # 2 projects per row
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 40px;'): # Research projects title
         create_label('Research Projects', font_size=font_size_large)
@@ -110,7 +110,7 @@ def projects_page(): # Projects page main function
             ]
             
             for i in range(0, len(research_projects), 2): # Create research project rows
-                create_project_row(research_projects[i:i+2])
+                create_project_row(research_projects[i:i+2]) # 2 projects per row
     vu_footer() # footer
 
 @ui.page('/projects') # Route projects page
