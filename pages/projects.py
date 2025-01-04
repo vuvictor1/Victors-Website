@@ -30,11 +30,23 @@ def create_project_section(link_text, link_url, description, details): # Helper 
             create_label(detail, color='#FFFFFF')
         ui.separator().style('margin: 20px 0;')
 
-def create_project_row(projects): # Helper function to create a project row
+def create_research_project_section(link_text, link_url, description, details): # Helper function to create a research project section
+    with ui.card().classes('card').style('width: 45%; margin: 10px auto;'): # Center the card
+        with ui.row().style('justify-content: center; width: 100%;'):
+            create_link(link_text, link_url, color='#FFA500')
+            create_label(f' {description}', color='#FFFFFF')
+        for detail in details: # Create project details
+            create_label(detail, color='#FFFFFF')
+        ui.separator().style('margin: 20px 0;')
+
+def create_project_row(projects, is_research=False): # Helper function to create a project row
     with ui.row().style('justify-content: center; width: 100%; margin-bottom: 20px;'):
         for project in projects:
             with ui.column().style('width: 45%; margin: 10px;'):
-                create_project_section(*project)
+                if is_research:
+                    create_research_project_section(*project)
+                else:
+                    create_project_section(*project)
 
 def projects_page(): # Projects page main function
     vu_header() # inject header
@@ -49,7 +61,7 @@ def projects_page(): # Projects page main function
             ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay style="height: 400px; margin-bottom: 20px;"></lottie-player>') # play lottie animation
 
             # List of projects
-            projects = [
+            programming_projects = [
                 ('7 Realms', 'https://drive.google.com/file/d/1tjU7ZSoMfIJiEwQ6MBiLT4QyQyFunaHS/view?usp=sharing', '(High-tech medieval-themed game introducing new mechanics through modification.)', [
                     '● In a team of 6, served as the Process Manager / Group Facilitator.',
                     '● Delegated tasks and supervised group members, ensuring timely project completion.',
@@ -94,8 +106,8 @@ def projects_page(): # Projects page main function
                 ])
             ]
 
-            for i in range(0, len(projects), 2): # Create project rows
-                create_project_row(projects[i:i+2]) # 2 projects per row
+            for i in range(0, len(programming_projects), 2): # Create project rows
+                create_project_row(programming_projects[i:i+2]) # 2 projects per row
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 40px;'): # Research projects title
         create_label('Research Projects', font_size=font_size_large)
@@ -110,7 +122,7 @@ def projects_page(): # Projects page main function
             ]
             
             for i in range(0, len(research_projects), 2): # Create research project rows
-                create_project_row(research_projects[i:i+2]) # 2 projects per row
+                create_project_row(research_projects[i:i+2], is_research=True) # 2 projects per row
     vu_footer() # footer
 
 @ui.page('/projects') # Route projects page
