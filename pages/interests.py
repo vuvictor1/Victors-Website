@@ -10,7 +10,7 @@ from components import vu_header, vu_footer, inject_ui
 base_style = 'color: #FFFFFF; font-size: 16px; padding: 10px; text-align: center;'
 sub_style = f'{base_style} font-size: 24px;'
 link_style = f'{base_style} font-size: 20px; color: #FFA500; text-decoration: underline;'
-title_style = f'{base_style} font-size: 32px; font-weight: bold;'
+title_style = f'{base_style} font-size: 32px;'
 column_style = 'align-items: center; text-align: center; padding: 20px;'
 row_style = 'justify-content: center; width: 100%; margin: 20px 0;'
 card_style = 'background-color: #333; border-radius: 10px; padding: 20px; margin: 10px; display: flex; flex-direction: column; align-items: center; width: 50%;' 
