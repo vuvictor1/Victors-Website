@@ -22,7 +22,7 @@ def create_link(text, url, color=orange_color, font_size=font_size_link): # Help
     ui.link(text, url).style(f'color: {color}; font-size: {font_size}; margin-bottom: 10px;')
 
 def create_project_section(link_text, link_url, description, details): # Helper function to create a project section
-    with ui.card().style('width: 100%; margin-bottom: 20px; background-color: #333333; color: #FFFFFF;'):
+    with ui.card().classes('projects').style('width: 100%; margin-bottom: 20px;'):
         with ui.row().style('justify-content: center; width: 100%;'):
             create_link(link_text, link_url, color='#FFA500')
             create_label(f' {description}', color='#FFFFFF')
@@ -45,7 +45,7 @@ def projects_page(): # Projects page main function
     inject_lottie() # inject lottie animation
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Projects content
-        with ui.column().classes('projects').style('align-items: center; text-align: center;'):
+        with ui.column().style('align-items: center; text-align: center;'):
             ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay style="height: 400px; margin-bottom: 20px;"></lottie-player>') # play lottie animation
 
             # List of projects
@@ -101,7 +101,7 @@ def projects_page(): # Projects page main function
         create_label('Research Projects', font_size=font_size_large)
 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Research projects content
-        with ui.column().classes('projects').style('align-items: center; text-align: center;'):
+        with ui.column().style('align-items: center; text-align: center;'):
             ui.html(f'<lottie-player src="{lottie_4_url}" loop autoplay style="height: 400px; margin-bottom: 20px;"></lottie-player>')
             research_projects = [ # List of research projects
                 ('Operations Analysis', 'https://docs.google.com/document/d/1XhZCOei60DCcFlYO1scSQ5m6UwcKfwTgmN0NjlamjtY/edit?tab=t.0#heading=h.868kz7lj5kq9', 'Detailed report on the time complexities of binary search trees, hash tables, vectors, dynamic link libraries and singly linked lists operations.', []),
