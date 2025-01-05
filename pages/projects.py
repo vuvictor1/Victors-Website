@@ -62,7 +62,7 @@ def projects_page(): # Projects page main function
 
             # List of projects
             programming_projects = [
-                ('7 Realms', 'https://drive.google.com/file/d/1tjU7ZSoMfIJiEwQ6MBiLT4QyQyFunaHS/view?usp=sharing', '(High-tech medieval-themed game introducing new mechanics through modification.)', [
+                ('7 Realms', 'https://drive.google.com/file/d/1u5gYVXi0HOdr1Gn2XOfvBFZfzWtIaacT/view?usp=sharing', '(High-tech medieval-themed game introducing new mechanics through modification.)', [
                     '● In a team of 6, served as the Process Manager / Group Facilitator.',
                     '● Delegated tasks and supervised group members, ensuring timely project completion.',
                     '● Recorded objective progress, conducted weekly meetings, and defined game requirements.',
