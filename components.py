@@ -65,4 +65,4 @@ def vu_header(): # Creates the header menu component
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center;'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 1/1/25').style(f'color: {text_color}; font-size: 18px;')
+        ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px;')
