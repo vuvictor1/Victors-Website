@@ -12,16 +12,16 @@ def contacts_page(): # Contacts page
     vu_header() # header function
     inject_ui() # inject CSS effects
 
-    with ui.row().classes('about-me').style('justify-content: center; align-items: center;'): # Center the contacts title
-        with ui.column().style('width: 100%; max-width: 600px;'): # Adjust padding and column width
-            inject_lottie() # inject lottie animation
-            ui.html(f'''<lottie-player src="{lottie_url}" loop autoplay style="height: 200px;"></lottie-player>''') # play file
-            ui.label('Contact Us').style('font-size: 32px; color: white;')
+    with ui.row().style('display: flex; justify-content: center; align-items: center; width: 100%; height: 60vh;'): # Center the contacts title
+        inject_lottie() # inject lottie animation
+        ui.html(f'''<lottie-player src="{lottie_url}" loop autoplay style="height: 200px; display: block; margin: 0 auto;"></lottie-player>''') # play file
+        with ui.column().classes('about-me').style('width: 100%; max-width: 600px; padding: 20px;'): # Adjust padding and column width
+            ui.label('Contact Us').style('font-size: 32px; color: white; text-align: center; display: block; margin: 20px auto;')
             # Create input fields for the form
-            name = ui.input('Name').props('label-color=white clearable input-class=text-white').style('font-size: 16px;')
-            email = ui.input('Email').props('label-color=white clearable input-class=text-white').style('font-size: 16px;')
-            message = ui.textarea('Message').props('label-color=white clearable input-class=text-white').style('font-size: 16px;')
-            ui.button('Send', on_click=lambda: submit_form(name.value, email.value, message.value)).style('font-size: 16px; color: white;') # submit button
+            name = ui.input('Name').props('label-color=white clearable input-class=text-white').style('font-size: 16px; width: 100%;')
+            email = ui.input('Email').props('label-color=white clearable input-class=text-white').style('font-size: 16px; width: 100%;')
+            message = ui.textarea('Message').props('label-color=white clearable input-class=text-white').style('font-size: 16px; width: 100%; height: 100px;')
+            ui.button('Send', on_click=lambda: submit_form(name.value, email.value, message.value)).style('font-size: 16px; color: white; width: 100%;') # submit button
     vu_footer() # footer function
 
 def submit_form(name, email, message): # Submit form
