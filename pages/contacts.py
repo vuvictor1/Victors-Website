@@ -20,7 +20,7 @@ def contacts_page(): # Contacts page
     with ui.row().style(f'justify-content: center; width: 100%; margin-top: 20px; background-color: {background_color};'): # Center the contacts title
         inject_lottie() # inject lottie animation
         with ui.column().classes('work').style(f'align-items: center; background-color: {card_background_color}; padding: 20px; border-radius: 10px;'): # Column for the contacts
-            ui.html(f'''<lottie-player src="{lottie_url}" loop autoplay style="height: 200px;"></lottie-player>''') # play file
+            ui.html(f'''<lottie-player src="{lottie_url}" loop autoplay speed="0.25" style="height: 200px;"></lottie-player>''') # play file
             ui.label('Contact Me').style(f'font-size: 32px; color: {text_color};') # Mail title
             # Create input fields for the form
             ui.html(f'''

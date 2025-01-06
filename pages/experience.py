@@ -24,7 +24,7 @@ def experience_page(): # Function to render the experience page
     lottie_1 = 'https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json' 
     with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Center columns and lower the margin
         with ui.column().classes('work').style(column_style): # Column for the first experience
-            ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay style="{lottie_style}"></lottie-player>''') # play animation
+            ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay speed="0.25" style="{lottie_style}"></lottie-player>''') # play animation
             ui.label('Instructional Assistant | CSUF - Department of Computer Science').style(bold_label_style)
             ui.label('(January 2023 - May 2023)').style(label_style)
             ui.label('● Supported 60+ students enrolled in Computer Architecture and Systems Programming.').style(label_style)
@@ -34,7 +34,7 @@ def experience_page(): # Function to render the experience page
 
         lottie_2 = 'https://assets3.lottiefiles.com/packages/lf20_6ft9bypa.json'
         with ui.column().classes('work').style(column_style): # Column for the second experience
-            ui.html(f'''<lottie-player src="{lottie_2}" loop autoplay style="{lottie_style}"></lottie-player>''') 
+            ui.html(f'''<lottie-player src="{lottie_2}" loop autoplay speed="0.25" style="{lottie_style}"></lottie-player>''') 
             ui.label('Peer Programming Tutor  | CSUF - Department of Computer Science').style(bold_label_style)
             ui.label('(August 2022 - December 2022)').style(label_style)
             ui.label('● Tutored 30+ peers enrolled in C# GUI Programming.').style(label_style)
