@@ -50,9 +50,8 @@ def inject_ui(): # Injects custom CSS styles
 
         @media (max-width: 1024px) {{ /* Laptop Styles */
             .about-me, .card, .languages, .work, .projects {{
-                width: 60%;
+                width: 80%;
                 margin: 10px 0;
-                padding: 15px;
             }}
         }}
 
@@ -60,14 +59,17 @@ def inject_ui(): # Injects custom CSS styles
             .about-me, .card, .languages, .work, .projects {{
                 width: 100%;
                 margin: 5px 0;
-                padding: 10px;
+            }}
+            header, footer {{
+                padding: 5px; /* Reduce padding */
+            }}
+            header a, footer label {{
+                font-size: 18px; /* Reduce font size */
+                margin: 2px; /* Reduce margin */
             }}
         }}
     </style>
     """)
-
-def inject_lottie(): # Injects Lottie player script
-    ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
     with ui.header().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
@@ -77,33 +79,11 @@ def vu_header(): # Creates the header menu component
         ui.link('Projects', '/projects').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
         ui.link('Interests', '/interests').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
         ui.link('Contact', '/contacts').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
-    ui.add_head_html(f"""
-    <style>
-        @media (max-width: 768px) {{
-            header {{
-                padding: 5px;
-            }}
-            header a, header label {{
-                font-size: 18px;
-                margin: 2px;
-            }}
-        }}
-    </style>
-    """)
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
         ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px; margin: 5px;')
-    ui.add_head_html(f"""
-    <style>
-        @media (max-width: 768px) {{
-            footer {{
-                padding: 5px;
-            }}
-            footer label {{
-                font-size: 14px;
-                margin: 2px;
-            }}
-        }}
-    </style>
-    """)
+
+
+def inject_lottie(): # Injects Lottie player script
+    ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
