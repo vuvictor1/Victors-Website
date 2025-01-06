@@ -50,7 +50,7 @@ def inject_ui(): # Injects custom CSS styles
 
         @media (max-width: 1024px) {{ /* Laptop Styles */
             .about-me, .card, .languages, .work, .projects {{
-                width: 80%;
+                width: 90%;
                 margin: 10px 0;
             }}
         }}
@@ -60,16 +60,12 @@ def inject_ui(): # Injects custom CSS styles
                 width: 100%;
                 margin: 5px 0;
             }}
-            header, footer {{
-                padding: 5px; /* Reduce padding */
-            }}
-            header a, footer label {{
-                font-size: 18px; /* Reduce font size */
-                margin: 2px; /* Reduce margin */
-            }}
         }}
     </style>
     """)
+
+def inject_lottie(): # Injects Lottie player script
+    ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
     with ui.header().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
@@ -83,7 +79,3 @@ def vu_header(): # Creates the header menu component
 def vu_footer(): # Creates the footer menu component
     with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
         ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px; margin: 5px;')
-
-
-def inject_lottie(): # Injects Lottie player script
-    ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
