@@ -48,6 +48,13 @@ def inject_ui(): # Injects custom CSS styles
             transform: scale(1.05);
         }}
 
+        @media (max-width: 1024px) {{ /* Laptop Styles */
+            .about-me, .card, .languages, .work, .projects {{
+                width: 80%;
+                margin: 10px 0;
+            }}
+        }}
+
         @media (max-width: 768px) {{ /* Mobile Styles */
             .about-me, .card, .languages, .work, .projects {{
                 width: 100%;
