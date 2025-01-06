@@ -77,5 +77,5 @@ def vu_header(): # Creates the header menu component
         ui.link('Contact', '/contacts').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
 
 def vu_footer(): # Creates the footer menu component
-    with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
+    with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px; position: static;'): 
         ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px; margin: 5px;')
