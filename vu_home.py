@@ -95,7 +95,7 @@ def home_page(): # Home Page
         ui.label('Languages').style(f'{white_text_style} font-size: 32px;') # Title
 
     with ui.row().style(f'{center_style} {margin_top_20_style}'): # Centered row languages
-        with ui.column().classes('languages').style('align-items: center; text-align: center; width: 20%;'): # Language Card
+        with ui.column().classes('work').style('align-items: center; text-align: center;'): # Language Card
             languages = 'English (Native) | Vietnamese (Fluent) | Japanese (Advanced)'
             ui.label(languages).style(f'{white_text_style} font-size: 16px;')
     vu_footer() # inject footer
