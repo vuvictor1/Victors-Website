@@ -61,14 +61,14 @@ def inject_lottie(): # Injects Lottie player script
     ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
-    with ui.header().style(f'background-color: {header_footer_color}; justify-content: center;'): 
-        ui.link('⚡ Victor\'s Website', '/').style(f'color: {text_color}; font-size: 24px; text-decoration: none;') 
-        ui.label('|').style(f'color: {text_color}; font-size: 24px;')
-        ui.link('Experience', '/experience').style(f'color: {text_color}; font-size: 24px; text-decoration: none;')
-        ui.link('Projects', '/projects').style(f'color: {text_color}; font-size: 24px; text-decoration: none;')
-        ui.link('Interests', '/interests').style(f'color: {text_color}; font-size: 24px; text-decoration: none;')
-        ui.link('Contact', '/contacts').style(f'color: {text_color}; font-size: 24px; text-decoration: none;')
+    with ui.header().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
+        ui.link('⚡ Victor\'s Website', '/').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;') 
+        ui.label('|').style(f'color: {text_color}; font-size: 24px; margin: 5px;')
+        ui.link('Experience', '/experience').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
+        ui.link('Projects', '/projects').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
+        ui.link('Interests', '/interests').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
+        ui.link('Contact', '/contacts').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
 
 def vu_footer(): # Creates the footer menu component
-    with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center;'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px;')
+    with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
+        ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px; margin: 5px;')
