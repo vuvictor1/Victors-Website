@@ -50,8 +50,9 @@ def inject_ui(): # Injects custom CSS styles
 
         @media (max-width: 1024px) {{ /* Laptop Styles */
             .about-me, .card, .languages, .work, .projects {{
-                width: 80%;
+                width: 60%;
                 margin: 10px 0;
+                padding: 15px;
             }}
         }}
 
@@ -59,6 +60,7 @@ def inject_ui(): # Injects custom CSS styles
             .about-me, .card, .languages, .work, .projects {{
                 width: 100%;
                 margin: 5px 0;
+                padding: 10px;
             }}
         }}
     </style>
@@ -75,7 +77,33 @@ def vu_header(): # Creates the header menu component
         ui.link('Projects', '/projects').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
         ui.link('Interests', '/interests').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
         ui.link('Contact', '/contacts').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
+    ui.add_head_html(f"""
+    <style>
+        @media (max-width: 768px) {{
+            header {{
+                padding: 5px;
+            }}
+            header a, header label {{
+                font-size: 18px;
+                margin: 2px;
+            }}
+        }}
+    </style>
+    """)
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
         ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').style(f'color: {text_color}; font-size: 18px; margin: 5px;')
+    ui.add_head_html(f"""
+    <style>
+        @media (max-width: 768px) {{
+            footer {{
+                padding: 5px;
+            }}
+            footer label {{
+                font-size: 14px;
+                margin: 2px;
+            }}
+        }}
+    </style>
+    """)
