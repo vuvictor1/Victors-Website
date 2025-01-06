@@ -34,7 +34,7 @@ def inject_ui(): # Injects custom CSS styles
             width: 15%; 
         }}          
         .languages {{
-            width: 125px; 
+            width: 10%; 
         }}
         .work {{
             width: 27%;
@@ -50,7 +50,7 @@ def inject_ui(): # Injects custom CSS styles
 
         @media (max-width: 1920px) {{ /* Laptop Styles */
             .about-me, .card, .languages, .work, .projects {{
-                width: 90%;
+                width: 80%;
                 margin: 10px 0;
             }}
         }}
