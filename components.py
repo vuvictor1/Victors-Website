@@ -68,7 +68,7 @@ def inject_lottie(): # Injects Lottie player script
     ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
-    with ui.header().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px;'): 
+    with ui.header().style(f'background-color: {header_footer_color}; justify-content: center; flex-wrap: wrap; padding: 10px; position: static;'): 
         ui.link('⚡ Victor\'s Website', '/').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;') 
         ui.label('|').style(f'color: {text_color}; font-size: 24px; margin: 5px;')
         ui.link('Experience', '/experience').style(f'color: {text_color}; font-size: 24px; text-decoration: none; margin: 5px;')
