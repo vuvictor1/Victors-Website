@@ -36,7 +36,7 @@ def home_page(): # Home Page
     inject_ui() # inject ui
 
     with ui.row().style(center_style): # Centered row title
-        ui.label('Victor V. Vu').style(f'{white_text_style} font-size: 32px;')
+        ui.label('Victor V. Vu').style(f'{white_text_style} font-size: 32px; margin-top: -20px;')
 
     with ui.row().style(f'{center_style} {margin_top_20_style}'): # Centered row about me
         with ui.column().classes('about-me').style('align-items: center; text-align: center;'): 
