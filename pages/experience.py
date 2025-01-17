@@ -8,7 +8,7 @@ from components import vu_header, vu_footer, inject_ui, inject_lottie
 
 # Constants for repeated styles
 label_style = 'color: #FFFFFF; font-size: 16px;'
-title_style = 'color: #FFFFFF; font-size: 32px; margin-top: -20px;'
+title_style = 'color: #FFFFFF; font-size: 32px; margin-top: -40px;'
 bold_label_style = 'color: #FFFFFF; font-size: 20px;'
 column_style = 'align-items: center;'
 lottie_style = 'height: 400px;'
@@ -22,7 +22,7 @@ def experience_page(): # Function to render the experience page
     inject_lottie() # inject lottie animation
 
     lottie_1 = 'https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json' 
-    with ui.row().style('justify-content: center; width: 100%; margin-top: 20px;'): # Center columns and lower the margin
+    with ui.row().style('justify-content: center; width: 100%; margin-top: 20 px;'): # Center columns and lower the margin
         with ui.column().classes('work').style(column_style): # Column for the first experience
             ui.html(f'''<lottie-player src="{lottie_1}" loop autoplay speed="0.25" style="{lottie_style}"></lottie-player>''') # play animation
             ui.label('Instructional Assistant | CSUF - Department of Computer Science').style(bold_label_style)
