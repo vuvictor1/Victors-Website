@@ -52,7 +52,7 @@ def projects_page(): # Projects page main function
     vu_header() # inject header
     inject_ui() # inject UI
 
-    with ui.row().style('justify-content: center; width: 100%; margin-bottom: 20px;'): # Projects title
+    with ui.row().style('justify-content: center; width: 100%; margin-top: -20px;'): # Projects title
         create_label('Programming Projects', font_size=font_size_large)
     inject_lottie() # inject lottie animation
 

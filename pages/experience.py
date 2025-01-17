@@ -8,7 +8,7 @@ from components import vu_header, vu_footer, inject_ui, inject_lottie
 
 # Constants for repeated styles
 label_style = 'color: #FFFFFF; font-size: 16px;'
-title_style = 'color: #FFFFFF; font-size: 32px;'
+title_style = 'color: #FFFFFF; font-size: 32px; margin-top: -20px;'
 bold_label_style = 'color: #FFFFFF; font-size: 20px;'
 column_style = 'align-items: center;'
 lottie_style = 'height: 400px;'
