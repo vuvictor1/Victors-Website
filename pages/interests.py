@@ -11,7 +11,7 @@ def interests_page(): # Interests page
     inject_ui() # inject UI
 
     with ui.row().classes('justify-center w-full my-4'): # Center the title
-        ui.label('Interests: A compilation of my work outside of tech.').classes('text-white text-4xl font-bold text-center')
+        ui.label('Interests: Compilation of my work outside of tech').classes('text-white text-4xl font-bold text-center')
 
     with ui.row().classes('justify-center w-full my-4 flex flex-wrap gap-4'): # Create a row for interests
         with ui.column().style('max-width: 50rem;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg w-full'):
