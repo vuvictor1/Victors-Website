@@ -18,7 +18,7 @@ def projects_page(): # Projects page main function
         ui.label('Programming Projects').classes('text-white text-4xl font-bold')
     inject_lottie() # inject lottie animation
 
-    ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay speed="0.25"></lottie-player>').classes('w-96 mx-auto') # play lottie animation
+    ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay speed="0.75"></lottie-player>').classes('w-full max-w-md mx-auto') # play lottie animation
 
     # List of projects
     programming_projects = [
@@ -67,9 +67,9 @@ def projects_page(): # Projects page main function
     ]
 
     for i in range(0, len(programming_projects), 2): # Create project rows
-        with ui.row().classes('justify-center w-full my-4 flex flex-wrap gap-4'):
+        with ui.row().classes('justify-center w-full my-4 flex-wrap gap-4'):
             for project in programming_projects[i:i+2]: # Create project sections
-                with ui.column().style('max-width: 40rem;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg'):
+                with ui.column().style('max-width: 100%;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg'):
                     ui.link(project[0], project[1]).classes('text-blue-300 text-2xl font-semibold') # Updated color class
                     ui.label(f' {project[2]}').classes('text-white text-lg')
                     for detail in project[3]: # Create project details
@@ -79,7 +79,7 @@ def projects_page(): # Projects page main function
     with ui.row().classes('justify-center w-full my-4'): # Center the title
         ui.label('Research Projects').classes('text-white text-4xl font-bold')
 
-    ui.html(f'<lottie-player src="{lottie_4_url}" loop autoplay speed="0.25"></lottie-player>').classes('w-96 mx-auto') # play lottie animation
+    ui.html(f'<lottie-player src="{lottie_4_url}" loop autoplay speed="0.75"></lottie-player>').classes('w-full max-w-md mx-auto') # play lottie animation
 
     research_projects = [ # List of research projects
         ('Operations Analysis', 'https://docs.google.com/document/d/1XhZCOei60DCcFlYO1scSQ5m6UwcKfwTgmN0NjlamjtY/edit?tab=t.0#heading=h.868kz7lj5kq9', 'Detailed report on the time complexities of binary search trees, hash tables, vectors, dynamic link libraries and singly linked lists operations.', []),
@@ -88,9 +88,9 @@ def projects_page(): # Projects page main function
     ]
 
     for i in range(0, len(research_projects), 2): # Create research project rows
-        with ui.row().classes('justify-center w-full my-4 flex flex-wrap gap-4'):
+        with ui.row().classes('justify-center w-full my-4 flex-wrap gap-4'):
             for project in research_projects[i:i+2]: # Create research project sections
-                with ui.column().style('max-width: 40rem;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg'):
+                with ui.column().style('max-width: 100%;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg'):
                     ui.link(project[0], project[1]).classes('text-blue-300 text-2xl font-semibold') # Updated color class
                     ui.label(f' {project[2]}').classes('text-white text-lg')
                     for detail in project[3]: # Create project details

@@ -46,12 +46,12 @@ def home_page(): # Home Page
             Someday I hope to combine my foreign language proficiency and technical skills in order to make an international impact as a Software Engineer. 
             Please check out my full work in the projects and interests tab above.''').classes('text-white text-lg') # description
 
-            with ui.row().classes('justify-center w-full my-4'): # Centered row buttons
-                ui.button('Resume', icon='description', on_click=lambda: ui.navigate.to(resume_url, new_tab=True)).classes('bg-blue-500 text-white')
-                ui.button('Linkedin', icon='business', on_click=lambda: ui.navigate.to(linkedin_url, new_tab=True)).classes('bg-blue-700 text-white')
-                ui.button('GitHub', icon='</>', on_click=lambda: ui.navigate.to(github_url, new_tab=True)).classes('bg-gray-800 text-white')
+            with ui.row().classes('justify-center w-full my-4 flex-wrap'): # Centered row buttons
+                ui.button('Resume', icon='description', on_click=lambda: ui.navigate.to(resume_url, new_tab=True)).classes('bg-blue-500 text-white m-2')
+                ui.button('Linkedin', icon='business', on_click=lambda: ui.navigate.to(linkedin_url, new_tab=True)).classes('bg-blue-700 text-white m-2')
+                ui.button('GitHub', icon='</>', on_click=lambda: ui.navigate.to(github_url, new_tab=True)).classes('bg-gray-800 text-white m-2')
 
-            with ui.row().classes('justify-center w-full my-4'): # Centered row contact info
+            with ui.row().classes('justify-center w-full my-4 flex-wrap'): # Centered row contact info
                 ui.icon('contact_mail').classes('text-white text-4xl')
                 ui.label('Email: vuvictor@csu.fullerton.edu').classes('text-white text-lg')
 
@@ -60,21 +60,21 @@ def home_page(): # Home Page
 
     with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row projects
         for project, description in project_descriptions.items(): # Project Data
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-sm my-4'): # Project Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-sm my-4 mx-2'): # Project Card
                 ui.label(project).classes('text-white text-2xl font-semibold') 
                 ui.label(description).classes('text-white text-lg') 
-                ui.button('Project Link', on_click=lambda url=project_urls[project]: ui.navigate.to(url, new_tab=True)).classes('bg-blue-500 text-white') # project Button
+                ui.button('Project Link', on_click=lambda url=project_urls[project]: ui.navigate.to(url, new_tab=True)).classes('bg-blue-500 text-white m-2') # project Button
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row tabs
         ui.label('Programming').classes('text-white text-4xl font-bold')
 
     with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row languages
         for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'JavaScript', 'Assembly']: # Programming Languages
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg min-w-[150px] max-w-xl my-4'): # Language Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg min-w-[150px] max-w-xl my-4 mx-2'): # Language Card
                 ui.label(language).classes('text-blue-300 text-2xl font-semibold')
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row tech
-        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-6xl my-4'):
+        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-6xl my-4 mx-2'):
             ui.label('Technologies: React, Node.js, Tailwind CSS, CSS, HTML, MySQL, PostGreSQL, Power BI, Google Cloud, Microsoft Azure, and Oracle Cloud').classes('text-white text-lg text-center')
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row tabs
@@ -82,7 +82,7 @@ def home_page(): # Home Page
 
     with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row education
         for education, description in education_descriptions.items(): # Education Data
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-md my-4'): # Education Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-md my-4 mx-2'): # Education Card
                 ui.label(education).classes('text-white text-lg font-semibold') 
                 ui.label(description).classes('text-white text-lg')
 
@@ -90,7 +90,7 @@ def home_page(): # Home Page
         ui.label('Languages').classes('text-white text-4xl font-bold') # Title
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row languages
-        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-xl my-4'): # Language Card
+        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-xl my-4 mx-2'): # Language Card
             languages = 'English (Native) | Vietnamese (Fluent) | Japanese (Advanced)'
             ui.label(languages).classes('text-white text-lg')
     vu_footer() # inject footer
