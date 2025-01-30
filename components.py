@@ -14,12 +14,15 @@ def inject_ui(): # Injects Tailwind CSS
     <style>
         body {{
             background-color: {background_color};
-            min-height: 100vh; /* Ensure body takes at least full viewport height */
+            min-height: 100vh; /* ensure body takes at least full viewport height */
             display: flex;
             flex-direction: column;
         }}
         main {{
-            flex: 1; /* Allow main content to grow and take available space */
+            flex: 1; /* allow main content to grow and take available space */
+            /* Reduce unnecessary margin space */
+            margin-top: -60px;
+            margin-bottom: -55px;
         }}
     </style>
     """)
@@ -38,4 +41,4 @@ def vu_header(): # Creates the header menu component
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().classes('justify-center flex-wrap static p-4').style(f'background-color: {header_footer_color}'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').classes('text-white text-lg')
+        ui.label('Copyright (C) Victor Vu | Last updated 1/29/25').classes('text-white text-xl')
