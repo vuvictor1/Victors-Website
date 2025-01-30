@@ -14,6 +14,12 @@ def inject_ui(): # Injects Tailwind CSS
     <style>
         body {{
             background-color: {background_color};
+            min-height: 100vh; /* Ensure body takes at least full viewport height */
+            display: flex;
+            flex-direction: column;
+        }}
+        main {{
+            flex: 1; /* Allow main content to grow and take available space */
         }}
     </style>
     """)
@@ -22,14 +28,14 @@ def inject_lottie(): # Injects Lottie player script
     ui.add_body_html('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>') 
 
 def vu_header(): # Creates the header menu component
-    with ui.header().classes('justify-center flex-wrap static').style(f'background-color: {header_footer_color}'): 
-        ui.link('⚡ Victor\'s Website', '/').classes('text-white text-2xl no-underline') 
-        ui.label('|').classes('text-white text-2xl')
-        ui.link('Experience', '/experience').classes('text-white text-2xl no-underline')
-        ui.link('Projects', '/projects').classes('text-white text-2xl no-underline')
-        ui.link('Interests', '/interests').classes('text-white text-2xl no-underline')
-        ui.link('Contact', '/contacts').classes('text-white text-2xl no-underline')
+    with ui.header().classes('justify-center flex-wrap static p-4').style(f'background-color: {header_footer_color}'): 
+        ui.link('⚡ Victor\'s Website', '/').classes('text-white text-2xl no-underline mb-2 md:mb-0') 
+        ui.label('|').classes('text-white text-2xl hidden md:inline-block')
+        ui.link('Experience', '/experience').classes('text-white text-2xl no-underline mb-2 md:mb-0')
+        ui.link('Projects', '/projects').classes('text-white text-2xl no-underline mb-2 md:mb-0')
+        ui.link('Interests', '/interests').classes('text-white text-2xl no-underline mb-2 md:mb-0')
+        ui.link('Contact', '/contacts').classes('text-white text-2xl no-underline mb-2 md:mb-0')
 
 def vu_footer(): # Creates the footer menu component
-    with ui.footer().classes('justify-center flex-wrap static').style(f'background-color: {header_footer_color}'): 
+    with ui.footer().classes('justify-center flex-wrap static p-4').style(f'background-color: {header_footer_color}'): 
         ui.label('Copyright (C) Victor Vu | Last updated 1/5/25').classes('text-white text-lg')
