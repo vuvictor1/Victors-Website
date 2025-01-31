@@ -36,7 +36,7 @@ def home_page(): # Home Page
         ui.label('Victor V. Vu').classes('text-white text-4xl font-bold')
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row about me
-        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-7xl mx-auto'): 
+        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-7xl mx-auto  outline_label'): 
             ui.image('https://i.imgur.com/DaV1eqK.png').classes('rounded-full w-40') # Profile Picture
             ui.label('Aspiring Software Engineer').classes('text-white text-2xl font-semibold') # profile subtitle
             ui.label('About Me').classes('text-white text-3xl font-bold') # title
@@ -58,9 +58,9 @@ def home_page(): # Home Page
     with ui.row().classes('justify-center w-full my-4'): # Centered row tabs
         ui.label('Featured Projects').classes('text-white text-4xl font-bold')
 
-    with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row projects
+    with ui.row().classes('justify-center w-full flex flex-wrap my-4 '): # Centered row projects
         for project, description in project_descriptions.items(): # Project Data
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-sm my-4 mx-2'): # Project Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-sm my-4 mx-2 outline_label'): # Project Card
                 ui.label(project).classes('text-white text-2xl font-semibold') 
                 ui.label(description).classes('text-white text-lg') 
                 ui.button('Project Link', on_click=lambda url=project_urls[project]: ui.navigate.to(url, new_tab=True)).classes('bg-blue-500 text-white m-2') # project Button
@@ -70,11 +70,11 @@ def home_page(): # Home Page
 
     with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row languages
         for language in ['Python', 'C#', 'C++', 'C', 'Rust', 'JavaScript', 'Assembly']: # Programming Languages
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg min-w-[150px] max-w-xl my-4 mx-2'): # Language Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg min-w-[150px] max-w-xl my-4 mx-2 outline_label'): # Language Card
                 ui.label(language).classes('text-blue-300 text-2xl font-semibold')
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row tech
-        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-6xl my-4 mx-2'):
+        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-6xl my-4 mx-2 outline_label'):
             ui.label('Technologies: React, Node.js, Tailwind CSS, CSS, HTML, MySQL, PostGreSQL, Power BI, Google Cloud, Microsoft Azure, and Oracle Cloud').classes('text-white text-lg text-center')
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row tabs
@@ -82,7 +82,7 @@ def home_page(): # Home Page
 
     with ui.row().classes('justify-center w-full flex flex-wrap my-4'): # Centered row education
         for education, description in education_descriptions.items(): # Education Data
-            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-md my-4 mx-2'): # Education Card
+            with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-md my-4 mx-2 outline_label'): # Education Card
                 ui.label(education).classes('text-white text-lg font-semibold') 
                 ui.label(description).classes('text-white text-lg')
 
@@ -90,7 +90,7 @@ def home_page(): # Home Page
         ui.label('Languages').classes('text-white text-4xl font-bold') # Title
 
     with ui.row().classes('justify-center w-full my-4'): # Centered row languages
-        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-xl my-4 mx-2'): # Language Card
+        with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-xl my-4 mx-2 outline_label'): # Language Card
             languages = 'English (Native) | Vietnamese (Fluent) | Japanese (Advanced)'
             ui.label(languages).classes('text-white text-lg')
     vu_footer() # inject footer

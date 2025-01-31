@@ -24,6 +24,14 @@ def inject_ui(): # Injects Tailwind CSS
             margin-top: -60px;
             margin-bottom: -55px;
         }}
+        .outline_label {{
+            border: 2px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }}
+        .outline_label:hover {{
+            transform: scale(1.05);
+            border-color: #6A4C9C;
+        }}
     </style>
     """)
 
