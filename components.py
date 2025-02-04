@@ -24,6 +24,11 @@ def inject_ui(): # Injects Tailwind CSS
             margin-top: -60px;
             margin-bottom: -55px;
         }}
+        @media (max-width: 768px) {{
+            main {{
+                margin-top: -80px; /* further reduce top margin on mobile devices */
+            }}
+        }}
         .outline_label {{
             border: 2px solid transparent;
             transition: transform 0.3s ease, border-color 0.3s ease;
