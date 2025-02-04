@@ -11,7 +11,7 @@ def experience_page(): # Function to render the experience page
     inject_ui() # CSS effects
 
     with ui.row().classes('justify-center w-full my-4'): # Center the title
-        ui.label('Relevant Experience').classes('text-white text-4xl font-bold')
+        ui.label('Relevant Experience').classes('text-white text-4xl font-bold text-center')
     inject_lottie() # inject lottie animation
 
     lottie_1 = 'https://assets6.lottiefiles.com/packages/lf20_ne6kcqfz.json' 

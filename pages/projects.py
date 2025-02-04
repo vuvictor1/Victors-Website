@@ -15,7 +15,7 @@ def projects_page(): # Projects page main function
     inject_ui() # inject UI
 
     with ui.row().classes('justify-center w-full my-4'): # Center the title
-        ui.label('Programming Projects').classes('text-white text-4xl font-bold')
+        ui.label('Programming Projects').classes('text-white text-4xl font-bold text-center')
     inject_lottie() # inject lottie animation
 
     ui.html(f'<lottie-player src="{lottie_3_url}" loop autoplay speed="0.75"></lottie-player>').classes('w-full max-w-md mx-auto') # play lottie animation
