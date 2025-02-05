@@ -69,7 +69,7 @@ def projects_page(): # Projects page main function
     for i in range(0, len(programming_projects), 2): # Create project rows
         with ui.row().classes('justify-center w-full my-4 flex-wrap gap-4'):
             for project in programming_projects[i:i+2]: # Create project sections
-                with ui.column().style('max-width: 100%;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg outline_label'):
+                with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg outline_label'):
                     ui.link(project[0], project[1]).classes('text-blue-300 text-2xl font-semibold') # Updated color class
                     ui.label(f' {project[2]}').classes('text-white text-lg')
                     for detail in project[3]: # Create project details
@@ -90,7 +90,7 @@ def projects_page(): # Projects page main function
     for i in range(0, len(research_projects), 2): # Create research project rows
         with ui.row().classes('justify-center w-full my-4 flex-wrap gap-4'):
             for project in research_projects[i:i+2]: # Create research project sections
-                with ui.column().style('max-width: 30%;').classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg outline_label'):
+                with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg max-w-2xl outline_label'):
                     ui.link(project[0], project[1]).classes('text-blue-300 text-2xl font-semibold') # Updated color class
                     ui.label(f' {project[2]}').classes('text-white text-lg')
                     for detail in project[3]: # Create project details
