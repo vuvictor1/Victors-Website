@@ -26,7 +26,7 @@ def inject_ui(): # Injects Tailwind CSS
         }}
         @media (max-width: 768px) {{
             main {{
-                margin-top: -130px; /* further reduce top margin on mobile devices */
+                margin-top: -140px; /* further reduce top margin on mobile devices */
             }}
         }}
         .outline_label {{
@@ -54,4 +54,4 @@ def vu_header(): # Creates the header menu component
 
 def vu_footer(): # Creates the footer menu component
     with ui.footer().classes('justify-center flex-wrap static p-4').style(f'background-color: {header_footer_color}'): 
-        ui.label('Copyright (C) Victor Vu | Last updated 1/29/25').classes('text-white text-xl')
+        ui.label('Copyright (C) Victor Vu | Last updated 2/9/25').classes('text-white text-xl no-underline mb-2 md:mb-0')
