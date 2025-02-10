@@ -18,5 +18,6 @@ python3 vu_home.py
 - Python3
 - NiceGUI
 
-![Capture](https://github.com/user-attachments/assets/5163baa9-8558-4135-8266-6d1b370c8133)
+![Capture](https://github.com/user-attachments/assets/381882bd-dac7-48c3-b772-698ad0a0667f)
+
 
