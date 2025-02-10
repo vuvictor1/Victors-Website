@@ -22,11 +22,11 @@ def inject_ui(): # Injects Tailwind CSS
             flex: 1; /* allow main content to grow and take available space */
             /* Reduce unnecessary margin space */
             margin-top: -60px;
-            margin-bottom: -55px;
+            margin-bottom: -65px;
         }}
         @media (max-width: 768px) {{
             main {{
-                margin-top: -120px; /* further reduce top margin on mobile devices */
+                margin-top: -130px; /* further reduce top margin on mobile devices */
             }}
         }}
         .outline_label {{

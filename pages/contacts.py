@@ -12,7 +12,7 @@ def contacts_page(): # Contacts page
     vu_header() # header function
     inject_ui() # inject CSS effects
 
-    with ui.row().classes('justify-center w-full my-6'): # Center the contacts title
+    with ui.row().classes('justify-center w-full my-12'): # Center the contacts title
         inject_lottie() # inject lottie animation
         with ui.column().classes('items-center text-center p-5 bg-gray-800 rounded-lg shadow-lg outline_label'):
             ui.html(f'''<lottie-player src="{lottie_url}" loop autoplay speed="0.25"></lottie-player>''').classes('w-48 mx-auto') # play file
